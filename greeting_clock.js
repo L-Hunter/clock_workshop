@@ -17,7 +17,7 @@ var time = h + ":" + m + ":" + s;
 
 //insert into html page
 document.getElementById("time").innerHTML = time;
-
+greeting();
 // update css
 // $(".color").css("background-color", hexColor);
 
@@ -37,3 +37,17 @@ function doubleDigits(i){
 }
 
 clock();
+
+function greeting(){
+	var today = new Date()
+	var h = today.getHours();	
+	if (h < 12) {
+		document.getElementById("greeting").innerText = "Good Morning!";
+	}
+	else if (h < 17) {
+		document.getElementById("greeting").innerText = "Good Afternoon!";
+	}
+	else {
+		document.getElementById("greeting").innerText = "Good Evening!";
+	}
+}
