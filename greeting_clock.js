@@ -1,4 +1,3 @@
-
 function clock(){
 // pull in time
 var today = new Date()
@@ -13,15 +12,17 @@ m = doubleDigits(m);
 s = doubleDigits(s);
 
 //define hexcolor
-var hexColor = "#" + h + m + s;
+// var hexColor = "#" + h + m + s;
+var time = h + ":" + m + ":" + s;
 
 //insert into html page
-document.getElementById("time").innerHTML = hexColor;
+document.getElementById("time").innerHTML = time;
 
 // update css
+// $(".color").css("background-color", hexColor);
 
-var bodyColor = document.querySelector("#body-color");
-bodyColor.style.backgroundColor = hexColor;
+// var bodyColor = document.querySelector("#body-color");
+// bodyColor.style.backgroundColor = hexColor;
 
 //refresh time
 setTimeout(clock, 1000);
