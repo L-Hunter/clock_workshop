@@ -19,7 +19,7 @@ var time = h + ":" + m + ":" + s;
 document.getElementById("time").innerHTML = time;
 greeting();
 // update css
-background()
+// background()
 
 //refresh time
 setTimeout(clock, 1000);
@@ -36,8 +36,9 @@ function doubleDigits(i){
 clock();
 
 function greeting(){
-	var today = new Date()
-	var h = today.getHours();	
+	var today = new Date();
+	var h = today.getHours();
+
 	if (h < 12) {
 		document.getElementById("greeting").innerText = "Good Morning!";
 	}
@@ -49,8 +50,11 @@ function greeting(){
 	}
 }
 
-// function background(){
-// var number = Math.floor(Math.random() * 5) + 1;
-// var name = "img_" + number;
-// document.getElementById("background").src= images + "/" + name ;
-// }
+function backgroundChange(){
+	setTimeout(backgroundChange, 10000);
+	var number = Math.floor(Math.random() * 5) + 1;
+	document.getElementById("background").style.backgroundImage = "url('images/img_" + number + ".jpg')";
+
+}
+
+backgroundChange();
