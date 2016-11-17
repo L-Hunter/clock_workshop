@@ -11,21 +11,29 @@ var s = today.getSeconds();
 h = doubleDigits(h);
 m = doubleDigits(m);
 s = doubleDigits(s);
+
+//define hexcolor
+var hexColor = "#" + h + m + s;
+
 //insert into html page
-document.getElementById("time").innerHTML = "#" + h + m + s;
+document.getElementById("time").innerHTML = hexColor;
+
+// update css
+// $(".color").css("background-color", hexColor);
+
+var bodyColor = document.querySelector("#body-color");
+bodyColor.style.backgroundColor = hexColor;
+
 //refresh time
 setTimeout(clock, 1000);
 }
 
 //check for double digits and add 0 if necessary
-function doubleDigits(t){
-	if (t < 10){
-		t = "0" + t;
+function doubleDigits(i){
+	if (i < 10){
+		i = "0" + i;
 	}
-// if already double digits do nothing
-	else {
-		return t;
-	}
+		return i;
 }
 
 clock();
