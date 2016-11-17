@@ -19,10 +19,7 @@ var time = h + ":" + m + ":" + s;
 document.getElementById("time").innerHTML = time;
 greeting();
 // update css
-// $(".color").css("background-color", hexColor);
-
-// var bodyColor = document.querySelector("#body-color");
-// bodyColor.style.backgroundColor = hexColor;
+background()
 
 //refresh time
 setTimeout(clock, 1000);
@@ -51,3 +48,9 @@ function greeting(){
 		document.getElementById("greeting").innerText = "Good Evening!";
 	}
 }
+
+// function background(){
+// var number = Math.floor(Math.random() * 5) + 1;
+// var name = "img_" + number;
+// document.getElementById("background").src= images + "/" + name ;
+// }
